@@ -14,8 +14,10 @@ to your usual anticheat.
 
 - **Cheat clients and mods** (Meteor, Wurst, LiquidBounce, Aristois, BleachHack, Freecam, X-ray
   mods, auto clickers, auto attack, AutoTotem, Baritone, world downloaders and more): over 85 mods
-  and clients out of the box, all editable in `config.yml`. Every mod published on Modrinth was
-  checked against its own released files, old and new versions, so its detection matches the mod.
+  and clients built in, updated with every release. Every mod published on Modrinth was checked
+  against its own released files, old and new versions, so its detection matches the mod. Add your
+  own detections in `config.yml`, ignore a mod your server allows (`ignore-clients`), or change any
+  mod's punishment by name.
 - **Clients that lie about what they are**: modded clients claiming to be vanilla (even when they
   hide their plugin channels), fake Lunar Client brands, LiquidBounce's client spoofer, and clients
   that hide every mod from the server.
@@ -110,8 +112,8 @@ The first five work for offline players too, so a ban plugin's ban screen can us
 ## Updating
 
 Replace the jar and restart. New settings are added to your existing `config.yml` with their
-comments; your own values are never changed. Lists you edited (such as `sign-probe.keys`) are
-kept as you have them, so new detections in an update may need adding by hand.
+comments; your own values are never changed. The built-in detections come with the jar, so every
+update brings the newest ones without touching your config.
 
 ModSentry checks for a newer version at startup and every 12 hours, and tells the console and
 staff with `modsentry.command` when one is out. Only the version number is downloaded; nothing
