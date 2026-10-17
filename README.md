@@ -16,8 +16,10 @@ to your usual anticheat.
   mods, auto clickers, auto attack, AutoTotem, Baritone, world downloaders and more): over 85 mods
   and clients built in, updated with every release. Every mod published on Modrinth was checked
   against its own released files, old and new versions, so its detection matches the mod. Add your
-  own detections in `config.yml`, ignore a mod your server allows (`ignore-clients`), or change any
-  mod's punishment by name.
+  own detections in `config.yml`.
+- **See and change every detection**: `config.yml` lists every built-in detection by name under
+  `punishments.mods`, each with its own punishment: `ban`, `kick`, `none` (alert only), `ignore`
+  (no alert at all) or your own commands.
 - **Clients that lie about what they are**: modded clients claiming to be vanilla (even when they
   hide their plugin channels), fake Lunar Client brands, LiquidBounce's client spoofer, and clients
   that hide every mod from the server.
@@ -34,7 +36,7 @@ A full scan takes about a second, runs once the player starts walking, and is in
   after that. The ladder starts over 30 days after a player's last ban.
 - Mods many servers allow (minimaps, replay mods, inventory sorting, schematics) only alert staff.
 - Every detection's punishment can be changed: `ban`, `kick`, `none`, or your own list of console
-  commands. Set it on one mod, on a client name, or for a whole confidence level.
+  commands. Set it per mod under `punishments.mods`, or for a whole confidence level.
 - Players see exactly which mods to remove, on the kick or ban screen and through placeholders.
 - Detections from one scan are punished together, so a player is told every mod at once.
 - **Test mode** (`punishments.enabled: false`) shows staff what each player would get without
